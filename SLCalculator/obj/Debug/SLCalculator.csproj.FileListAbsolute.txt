@@ -1,0 +1,14 @@
+C:\Projects\CSharp\SLCalculator\SLCalculator\bin\Debug\SLCalculator.exe.config
+C:\Projects\CSharp\SLCalculator\SLCalculator\bin\Debug\SLCalculator.exe
+C:\Projects\CSharp\SLCalculator\SLCalculator\bin\Debug\SLCalculator.pdb
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.csprojAssemblyReference.cache
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\MainWindow.g.cs
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\App.g.cs
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator_MarkupCompile.cache
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\MainWindow.baml
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.g.resources
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.Properties.Resources.resources
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.csproj.GenerateResource.cache
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.csproj.CoreCompileInputs.cache
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.exe
+C:\Projects\CSharp\SLCalculator\SLCalculator\obj\Debug\SLCalculator.pdb
