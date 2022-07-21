@@ -1,0 +1,71 @@
+﻿<Window x:Class="SLCalculator.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="TrCalculator" Height="500" Width="400">
+    <Grid x:Name="MainRoot" Background="AntiqueWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="TextBlockAtr" HorizontalAlignment="Left" Margin="41,23,0,0" TextWrapping="Wrap" Text="ATR" VerticalAlignment="Top" Height="49" Width="100" FontSize="22" Grid.Row="0" Grid.Column="0"
+                   x:FieldModifier="protected" />
+        <ComboBox x:Name="ComboBoxDirection" HorizontalAlignment="Left" Margin="41,10,0,0" VerticalAlignment="Top" Width="120" FontSize="22" Height="58" Grid.Row="1" Grid.Column="0" SelectionChanged="comboBoxDirection_SelectionChanged"
+                  x:FieldModifier="protected">
+            <ComboBoxItem Content="Long" Foreground="#FF19E419" IsSelected="True"/>
+            <ComboBoxItem Content="Short" Foreground="#FFF13FB9"/>
+        </ComboBox>
+        <TextBlock x:Name="TextBlockSl" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="SL" VerticalAlignment="Top" Height="49" Width="100" FontSize="22" Grid.Row="2" Grid.Column="0"
+                   x:FieldModifier="protected" />
+        <TextBlock x:Name="TextBlockTp" HorizontalAlignment="Left" Margin="41,21,0,0" TextWrapping="Wrap" Text="TP" VerticalAlignment="Top" Height="49" Width="100" FontSize="22" Grid.Row="3" Grid.Column="0"
+                   x:FieldModifier="protected" />
+        <TextBlock x:Name="TextBlockSls" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="SL setting" VerticalAlignment="Top" Height="49" Width="100" FontSize="22" Grid.Row="4" Grid.Column="0"
+                   x:FieldModifier="protected" />
+        <TextBlock x:Name="TextBlockTps" HorizontalAlignment="Left" Margin="41,21,0,0" TextWrapping="Wrap" Text="TP setting" VerticalAlignment="Top" Height="49" Width="100" FontSize="22" Grid.Row="5" Grid.Column="0"
+                   x:FieldModifier="protected" />
+        <ScrollBar x:Name="ScrollBarSlSetting"  HorizontalAlignment="Left" Margin="131,10,0,0"  VerticalAlignment="Top" Height="58" Width="33" Value="0.5" Grid.Column="1" Grid.Row="4" FontSize="22" LargeChange="0.1" Minimum="0.1" ValueChanged = "sl_setting_ValueChanged"
+                   x:FieldModifier="protected" />
+        <ScrollBar x:Name="ScrollBarTpSetting"  HorizontalAlignment="Left" Margin="131,10,0,0"  VerticalAlignment="Top" Height="58" Width="33" Value="2" Grid.Column="1" Grid.Row="5" Minimum="1" Maximum="4" SmallChange="0.5" FontSize="22" LargeChange="0.5" ValueChanged="tp_setting_ValueChanged"
+                   x:FieldModifier="protected" />
+        <TextBox x:Name="TextBoxAtr" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="59" Margin="22,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" FontSize="22" TextChanged="textBoxATR_TextChanged"
+                 x:FieldModifier="protected" />
+        <TextBox x:Name="TextBoxBid" Grid.Column="1" HorizontalAlignment="Left" Height="59" Margin="22,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" FontSize="22" Grid.Row="1" TextChanged="textBoxBid_TextChanged"
+                 x:FieldModifier="protected" />
+        <TextBox x:Name="TextBoxSlOut" Grid.Column="1" HorizontalAlignment="Left" Height="59" Margin="22,10,0,0"  VerticalAlignment="Top" Width="142" FontSize="22" Grid.Row="2" Foreground="#FF0F0F0F" Background="#FFE494A9" FontWeight="Bold"
+               x:FieldModifier="protected" >
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="IsReadOnly" Value="True" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="TextWrapping" Value="Wrap" />
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="TextBoxTpOut" Grid.Column="1" HorizontalAlignment="Left" Height="59" Margin="22,9,0,0" VerticalAlignment="Top" Width="142" FontSize="22" Grid.Row="3" Foreground="#FF0F0F0F" Background="#FF67ABAE" FontWeight="Bold"
+               x:FieldModifier="protected" >
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="IsReadOnly" Value="True" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="TextWrapping" Value="Wrap" />
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+            <Label x:Name="LabelSl"  Content="{Binding ElementName=ScrollBarSL, Path=Value, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Margin="22,10,0,0" Grid.Row="4" VerticalAlignment="Top" Height="58" Width="91" FontSize="22"
+               x:FieldModifier="protected" />
+        <Label x:Name="LabelTp"  Content="{Binding ElementName=ScrollBarTP, Path=Value, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Margin="22,10,0,0" Grid.Row="5" VerticalAlignment="Top" Height="58" Width="91" FontSize="22"
+               x:FieldModifier="protected" />
+
+    </Grid>
+
+</Window>
